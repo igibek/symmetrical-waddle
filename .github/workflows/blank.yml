@@ -29,6 +29,6 @@ jobs:
       - if: ${{github.event_name == 'issue'}}
         run: echo "issue title ${{github.event.issue.title}}"
       - if: ${{github.event_name == 'pull_request_review'}}
-        run: echo "pr title ${{github.event.pull_request.title}}"
+        run: echo "pr title ${{github.event.pull_request.title}} ${{github.event.review.body}}"
       - if: ${{github.event_name == 'discussion_comment' || github.event_name == 'issue_comment'}}
         run: echo "comment body ${{github.event.comment.body}}"
