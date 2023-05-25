@@ -24,7 +24,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - run: ${{github.event.discussion.title}}
-      - run: ${{github.event.issue.title}}
-      - run: ${{github.event.pull_request.title}}
-      - run: ${{github.event.comment.body}}
+      - run: discussion title ${{github.event.discussion.title}}
+      - run: issue title ${{github.event.issue.title}}
+      - run: pr title ${{github.event.pull_request.title}}
+      - run: comment body ${{github.event.comment.body}}
