@@ -28,7 +28,7 @@ jobs:
         run: echo "discussion title ${{github.event.discussion.title}}"
       - if: ${{github.event_name == 'issue'}}
         run: echo "issue title ${{github.event.issue.title}}"
-      - if: ${{github.event_name == 'pull_request'}}
+      - if: ${{github.event_name == 'pull_request_review'}}
         run: echo "pr title ${{github.event.pull_request.title}}"
       - if: ${{github.event_name == 'discussion_comment'}}
         run: echo "comment body ${{github.event.comment.body}}"
